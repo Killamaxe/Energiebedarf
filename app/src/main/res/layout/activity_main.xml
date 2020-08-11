@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarmain"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="4dp"
+            app:popupTheme="@style/AppTheme">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RadioGroup
+        android:id="@+id/radiogroupe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="70dp">
+
+        <RadioButton
+            android:id="@+id/woman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Damen"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/man"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Herren"
+            android:textSize="15dp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/wightandhightext"
+        android:layout_height="20dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/radiogroupe"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/wighttext"
+            android:layout_width="149dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:text="Gewicht in KG"
+            android:textSize="15dp"/>
+
+
+        <TextView
+            android:id="@+id/hightext"
+            android:layout_width="149dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:text="Größe in cm"
+            android:textSize="15dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/wightandhigh"
+        android:layout_height="45dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/wightandhightext"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/wight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:ems="10"
+            android:hint="Gewicht in kg"
+            android:inputType="numberDecimal"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+        <EditText
+            android:id="@+id/high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Größe in cm"
+            android:inputType="number"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkboxes"
+        android:layout_below="@+id/wightandhigh"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aktivitätsfaktor"
+            android:textSize="15dp" />
+
+        <CheckBox
+            android:id="@+id/temperatur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Temparaturfaktor"
+            android:textSize="15dp" />
+
+        <CheckBox
+            android:id="@+id/illness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Krankheitsfaktor"
+            android:textSize="15dp" />
+
+        <CheckBox
+            android:id="@+id/eggwhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eiweißfaktor"
+            android:textSize="15dp" />
+
+        <CheckBox
+            android:id="@+id/liquid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="flüssigkeitsbeeinflussende Faktoren"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/bmitext"
+        android:layout_below="@+id/checkboxes"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/bmitext2"
+            android:layout_width="149dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:text="BMI"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/energytext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_weight="1"
+            android:text="Energiebedarf in kcal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bmifield"
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bmitext"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginRight="0dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/bmifield2"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:text="BMI"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/energyfield"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_weight="1"
+            android:text="Energiebedarf"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/liquidtext"
+        android:layout_below="@+id/bmifield"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/liquidtext2"
+            android:layout_width="128dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:text="Flüssigkeitsbedarf in ml" />
+
+        <TextView
+            android:id="@+id/eggwhitetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_weight="1"
+            android:text="Eiweißbedarf in g" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/liquidfield"
+        android:layout_below="@+id/liquidtext"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/liquidfield2"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:text="Flüssigkeitsbedarf"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/eggwhitefield"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp"
+            android:layout_weight="1"
+            android:text="Eiweißbedarf"
+            android:textSize="15dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/gufield"
+        android:layout_below="@+id/liquidfield"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/gutext"
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_weight="0.1"
+            android:text="GU"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/guvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="0"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/behindguvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="0"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gufield"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/calculat"
+            android:layout_width="413dp"
+            android:layout_height="59dp"
+            android:layout_below="@+id/gufield"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="109dp"
+            android:onClick="onClickMain"
+            android:text="Berechnen"
+            android:textColor="@color/colorPrimary"
+            android:visibility="visible"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+</RelativeLayout>

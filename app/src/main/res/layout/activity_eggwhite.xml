@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbareggwhite"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="4dp"
+            app:popupTheme="@style/AppTheme">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RadioGroup
+        android:id="@+id/radiogroupeeggwhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="70dp">
+
+        <RadioButton
+            android:id="@+id/firsteggwhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="normaler Bedarf"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/secondeggwhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="erhöhter Bedarf (Fieber, Geriatrie, Tumor) "
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/thirdeggwhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dekubitus"
+            android:textSize="15dp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/saveeggwhite"
+        android:layout_width="413dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:gravity="center|bottom"
+        android:onClick="onClickEggwhite"
+        android:text="Speichern"
+        android:textColor="@color/colorPrimary"
+        android:visibility="invisible"
+        tools:visibility="invisible" />
+
+</RelativeLayout>

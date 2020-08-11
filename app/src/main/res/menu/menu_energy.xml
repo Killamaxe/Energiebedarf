@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_activity"
+        android:title="@string/action_activity"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_temperatur"
+        android:title="@string/action_temperatur"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_illness"
+        android:title="@string/action_illness"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_eggwhite"
+        android:title="@string/action_eggwhite"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_liquid"
+        android:title="@string/action_liquid"
+        app:showAsAction="never" />
+
+</menu>

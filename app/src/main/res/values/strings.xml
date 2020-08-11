@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Energiebedarf</string>
+    <string name="action_activity">Aktivität</string>
+    <string name="action_temperatur">Temparatur</string>
+    <string name="action_illness">Krankheit</string>
+    <string name="action_eggwhite">Eiweiß</string>
+    <string name="action_liquid">Flüssigkeit</string>
+</resources>

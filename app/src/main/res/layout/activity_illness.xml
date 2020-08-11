@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarillness"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="4dp"
+            app:popupTheme="@style/AppTheme">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RadioGroup
+        android:id="@+id/radiogroupeillness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="70dp">
+
+        <RadioButton
+            android:id="@+id/firstillness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="künstl. Beatmung, Koma"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/secondillness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="komplikationslos"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/thirdillness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="größere OP"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/fourthillness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dekubitus kleiner 5 cm Durchmesser"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/fifthillness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Infektionen"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/sixillness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dekubitus größer 5 cm Durchmesser"
+            android:textSize="15dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/saveillness"
+        android:layout_width="413dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:gravity="center|bottom"
+        android:onClick="onClickIllness"
+        android:text="Speichern"
+        android:textColor="@color/colorPrimary"
+        android:visibility="invisible"
+        tools:visibility="invisible" />
+
+</RelativeLayout>

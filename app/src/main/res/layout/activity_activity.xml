@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbaractivity"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="4dp"
+            app:popupTheme="@style/AppTheme">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RadioGroup
+        android:id="@+id/radiogroupeactivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="70dp">
+
+        <RadioButton
+            android:id="@+id/firstactivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="bettlägrig"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/secondactivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="teilweise mobil (steht mit Hilfe auf, läuft ein paar Schritte)"
+            android:textSize="15dp" />
+
+        <RadioButton
+            android:id="@+id/thirdactivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="mobil (auch Demenz, Parkinson)"
+            android:textSize="15dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/saveactivity"
+        android:layout_width="413dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:gravity="center|bottom"
+        android:onClick="onClickActivity"
+        android:text="Speichern"
+        android:textColor="@color/colorPrimary"
+        android:visibility="invisible"
+        tools:visibility="invisible" />
+
+</RelativeLayout>
